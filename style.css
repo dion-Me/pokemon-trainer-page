@@ -1,0 +1,281 @@
+body {
+	margin:0;
+	font-family: Arial;
+	
+	background-image:url("assets/bg.jpg");
+	background-size:cover;
+	background-position:center;
+	
+	height:100vh;
+}
+
+h1 {
+	margin: 20px;
+}
+
+h2 {
+	margin-top:0;
+}
+
+.app {
+	display: grid;
+	grid-template-columns:400px 1fr;
+	gap:40px;
+	padding:40px;
+}
+
+.card {
+	background:rgba(255,255,255,0.75);
+	backdrop-filter:blur(8px);
+	border-radius:20px;
+	padding:20px
+}
+
+.explorer {
+	border: 1px solid black;
+	padding:20px;
+	align-items:center;
+	justify-content:center;
+	position: relative;
+	overflow:hidden;
+}
+
+.builder {
+	border: 1px solid black;
+	padding:20px;
+}
+
+.builder-content {
+	display: grid;
+	grid-template-columns: 1fr 250px;
+	gap: 30px;
+	align-items:start;
+}
+
+.team-grid {
+	display:grid;
+	grid-template-columns:repeat(2,1fr);
+	gap:20px;
+	margin-top:10px;
+}
+
+.team-slot {
+	height:120px;
+	border-radius:15px;
+	background:rgba(255,255,255,0.6);
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+	font-size:14px;
+	color:#555;
+	font-size:14px;
+}
+
+.team-slot img {
+	width:90px;
+	image-rendering:pixelated;
+}
+
+.team-slot:hover {
+	transform:scale(1.1);
+	transition:0.1s;
+	cursor:pointer;
+}
+
+.trainer-panel {
+	display:flex;
+	flex-direction:column;
+	gap:10px;
+	border-left:2px solid rgba(0,0,0,0.1);
+	padding-left:20px;
+}
+
+.trainer-panel input, textarea {
+	padding:6px;
+	border-radius:6px;
+	border:1px solid #ccc;
+}
+
+.trainer-photo-container{
+	width:100%;
+	height: 220px;
+	background:rgba(255,255,255,0.5);
+	border-radius:12px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	position: relative;
+	overflow:hidden;
+	cursor:pointer;
+}
+
+.trainer-photo-container:hover{
+
+	outline:2px dashed rgba(0,0,0,0.2);
+
+}
+
+#photoUpload{
+	display:none;
+}
+
+.trainer-placeholder{
+	color:#777;
+	font-size:14px;
+}
+
+#trainerPhoto {
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	display:none;
+}
+
+#trainerName{
+	background:rgba(255,255,255,0.8);
+	padding: 6px;
+	border-radius:6px;
+	color:black;
+}
+
+#trainerDesc{
+	background:rgba(255,255,255,0.8);
+	padding: 6px;
+	border-radius:6px;
+	color:black;
+}
+
+button {
+	padding: 6px 12px;
+	border:none;
+	border-radius: 16px;
+	background: #3648c9;
+	color:white;
+	cursor:pointer;
+}
+
+button:hover {
+	background: #a8aee0;
+}
+
+.pokemon-card{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	gap:6px;
+	margin-top:10px;
+	text-align:center;
+}
+
+.pokemon-card p{
+	margin:2px 0;
+}
+
+.pokemon-card img{
+	width:90px;
+	image-rendering:pixelated;
+}
+
+.pokeon-name{
+	text-transform: capitalize;
+	font-size:22px;
+	margin-botton:10px;
+}
+
+.pokemon-sprite{
+	width:120px;
+	image-rendering:pixelated;
+	margin-bottom:10px;
+}
+
+.pokedex-entry{
+	font-size:14px;
+	line-height:1.5;
+	text-align:justify;
+	margin:10px 20px;
+}
+
+.pokemon-type{
+	margin-top:14px;
+	font-weight:500;
+}
+
+.stats-grid{
+	display:grid;
+	grid-template-columns:1fr 1fr;
+	gap:10px;
+	margin:10px 0;
+}
+
+.stats-col p{
+	margin:4px 0;
+	font-size:15px;
+}
+
+.type-badge{
+	display:inline-block;
+	padding:4px 10px;
+	border-radius:12px;
+	color:white;
+	font-size:12px;
+	font-weight:bold;
+	text-transform:uppercase;
+	margin:4px;
+}
+
+.type-fire{background:#F08030;}
+.type-water{background:#6890F0;}
+.type-grass{background:#78C850;}
+.type-electric{background:#F8D030;color:black;}
+.type-ice{background:#98D8D8;color:black;}
+.type-fighting{background:#C03028;}
+.type-poison{background:#A040A0;}
+.type-ground{background:#E0C068;color:black;}
+.type-flying{background:#A890F0;}
+.type-psychic{background:#F85888;}
+.type-bug{background:#A8B820;}
+.type-rock{background:#B8A038;}
+.type-ghost{background:#705898;}
+.type-dragon{background:#7038F8;}
+.type-dark{background:#705848;}
+.type-steel{background:#B8B8D0;color:black;}
+.type-fairy{background:#EE99AC;color:black;}
+.type-normal{background:#A8A878;color:black;}
+
+.sprite-container{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	gap:6px;
+}
+
+.shiny-toggle{
+	font-size:13px;
+	cursor:pointer;
+}
+
+.autocomplete-list{
+	position:absolute;
+	background:white;
+	border-radius:12px;
+	width:100%;
+	max-height:220px;
+	overflow-y:auto;
+	box-shadow:0 8px 20px rgba(0,0,0,0.15);
+	z-index:100;
+	margin-top:4px;
+}
+
+.autocomplete-item{
+	padding:8px 12px;
+	cursor:pointer;
+	text-transform:capitalize;
+	font-size:14px;
+}
+
+.autocomplete-item:hover{
+	background:#f2f2f2;
+}
+
+

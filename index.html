@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Pokemon Page </title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<h1> Pokemon Trainer Builder </h1>
+
+<div class="app">
+	<div class = "explorer card">
+		<h2> Pokemon Explorer </h2>
+			<input id="searchInput" placeholder="Search Pokemon">
+			<div id="autocompleteList" class="autocomplete-list"></div>
+			<button onclick="searchPokemon()"> Search </button>
+			
+			<div id="pokemonCard"></div>
+	</div>
+	
+	<div class = "builder card" id="trainerCard">
+		<h2> Your Team </h2>
+		<div class="builder-content">
+			<div class = "team-grid">
+				<div class = "team-slot"> Empty </div>
+				<div class = "team-slot"> Empty </div>
+				<div class = "team-slot"> Empty </div>
+				<div class = "team-slot"> Empty </div>
+				<div class = "team-slot"> Empty </div>
+				<div class = "team-slot"> Empty </div>
+			</div>
+			
+			<div class="trainer-panel" >
+				<input type="text" id="trainerName" placeholder="Enter your name">
+			
+				<div class="trainer-photo-container">
+					<div class="trainer-placeholder">
+						Click to upload Trainer Photo
+					</div>
+					<img id="trainerPhoto">
+				</div>
+				
+				<input type="file" id="photoUpload">
+				
+				<textarea id="trainerDesc" placeholder="Trainer description"></textarea>
+				
+				<button onclick="saveTrainer()"> Save </button>
+				<button onclick="saveTrainerCard()"> Save Img </button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="script.js"></script>
+<script src="autocomplete.js"></script>
+<script src="trainerCard.js"></script>
+</body>
+</html>
