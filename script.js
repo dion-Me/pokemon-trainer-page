@@ -16,6 +16,43 @@ async function searchPokemon(name){
 	displayPokemon(data, speciesData)
 }
 
+async function randomPokemon(){
+
+	const id = Math.floor(Math.random()*1025)+1
+
+	const response = await fetch("https://pokeapi.co/api/v2/pokemon/"+id)
+	const data = await response.json()
+
+	const responseSpecies = await fetch("https://pokeapi.co/api/v2/pokemon-species/"+id)
+	const speciesData = await responseSpecies.json()
+
+	displayPokemon(data, speciesData)
+
+	const sprite = document.getElementById("pokemonSprite")
+	const name = document.querySelector(".pokemon-card h3")
+
+	if(sprite){
+		sprite.style.filter = "brightness(0)"
+	}
+
+	// ubah judul
+	let time = 5
+	name.innerText = "Can you guess this Pokémon? ("+time+")"
+
+	guessTimer = setInterval(()=>{
+		time--
+		name.innerText = "Can you guess this Pokémon? ("+time+")"
+	},1000)
+
+	setTimeout(()=>{
+		sprite.style.filter = "brightness(1)"
+		name.innerText = data.name.charAt(0).toUpperCase() + data.name.slice(1)
+
+		clearInterval(guessTimer)
+	},5000)
+
+}
+
 
 function displayPokemon(pokemon, speciesPokemon){
 	const card = document.getElementById("pokemonCard")

@@ -11,6 +11,8 @@ body {
 
 h1 {
 	margin: 20px;
+	text-align: center;
+	color: white;
 }
 
 h2 {
@@ -34,10 +36,24 @@ h2 {
 .explorer {
 	border: 1px solid black;
 	padding:20px;
+	text-align:center;
 	align-items:center;
 	justify-content:center;
 	position: relative;
 	overflow:hidden;
+}
+
+#searchInput {
+	background:rgba(255,255,255,0.8);
+	padding: 6px;
+	border-radius:6px;
+	color:black;
+}
+
+.explorer input {
+	padding:6px;
+	border-radius:6px;
+	border:1px solid #ccc;
 }
 
 .builder {
