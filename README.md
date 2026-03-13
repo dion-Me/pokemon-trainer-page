@@ -1,15 +1,3 @@
-# Pokemon Trainer Builder
-
-Small web mini-game experiment.
-
-Features:
-- Search Pokémon from PokeAPI
-- Build a trainer team
-- Random raid encounter (30%)
-- Mini raid boss battle
-
-Open `index.html` to start.
-
 # Pokemon Trainer Page
 
 "Simple web app that able to explore pokemon, build team, and saving trainer card"
@@ -59,6 +47,9 @@ pokemon-trainer-page/
 |-style.css
 |-README.md
 ```
+
+## How to Run
+Open `index.html` to start.
 
 ## Tech Stack
 - HTML + CSS + JS
