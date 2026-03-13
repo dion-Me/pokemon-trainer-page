@@ -198,24 +198,8 @@ function saveTrainer(){
 	)
 
 	saveTeam()
-
-	/*const raidChance = Math.random()*/
-	const raidChance = 0
-
-	console.log("Raid chance:", raidChance)
-
-	if(raidChance < 0.3){
-
-		alert("⚠ A Raid Boss has appeared nearby!")
-
-		window.location.href = "./raid/raid.html"
-
-	}else{
-
-		alert("Trainer saved!")
-
-	}
-
+	
+	alert("Trainer saved!")
 }
 
 function saveTeam(){
